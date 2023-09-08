@@ -5,7 +5,8 @@ body {
     justify-content: center;
     height: 100vh;
 }
-/*styling of the gameboard*/
+
+/*Styling of the gameboard*/
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, 200px);
@@ -17,4 +18,26 @@ body {
     height: 200px;
     text-align: center;
     border: 2px solid black;
+    cursor: pointer;
 }
+
+.boxes:hover {
+    background: lightgreen;
+}
+
+/*Styling of player names and scoreboard*/
+
+.playerinput {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+

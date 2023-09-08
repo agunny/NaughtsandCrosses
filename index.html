@@ -10,10 +10,21 @@
 <body>
     <h1>Naughts and Crosses</h1>
     <div>
-        player names
+        <div class="playerinput">
+            <label for="playerx">Player X:</label>
+            <input type="text" id="playerx" placeholder="Competitor X">
+
+            <label for="playery">Player O:</label>
+            <input type="text" id="playery" placeholder="Competitor O">
+        </div>
     </div>
-    <div>
-        scoreboard
+    <div class="scoreboard">
+        <div>Player X
+            <span id="playerxname"></span>Wins: <span>0</span>
+        </div>
+        <div>Player O
+            <span id="playeryname"></span>Wins: <span>0</span>
+        </div>
     </div>
     <div class="gameboard">
         <div class="boxes"></div>
