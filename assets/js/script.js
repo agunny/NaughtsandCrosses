@@ -32,6 +32,8 @@ function clickedOnce(e) {
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement)
     swapTurns()
+    if (checkWin(currentElement))
+    console.log("winning")
 }
 
 function placeElement (cell, currentElement){
@@ -40,6 +42,15 @@ function placeElement (cell, currentElement){
 
 function swapTurns (){
     circleTurn = !circleTurn
+}
+
+function checkWin(currentElement){
+    //to check all winning combinations
+    return winningCombinations.some(combination => {
+        return combination.every(index => {
+            return boxesElement[index].classList.contains(currentElement)
+        })
+    })
 }
 
 //input players names
