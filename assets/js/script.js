@@ -13,12 +13,18 @@ let winningCombinations = [
 ];
 let circleTurn
 
-boxesElement.forEach(boxes => {
+gameBegin()
+
+function gameBegin(){
+    circleTurn= false;
+    boxesElement.forEach(boxes => {
     boxes.addEventListener('click', clickedOnce, { once: true });
 });
 
+}
+
 function clickedOnce(e) {
-    // add function for placing x/o
+    // add function for placing x/o (done)
     // check for a win
     // check for a draw
     // check for whos turn
