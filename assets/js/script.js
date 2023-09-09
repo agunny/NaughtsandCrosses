@@ -31,7 +31,6 @@ gameBegin();
 resetGame.addEventListener('click', gameBegin);
 
 function gameBegin() {
-    gameactive = true;
     circleTurn = false;
     boxesElement.forEach(boxes => {
         gameActive= true;
