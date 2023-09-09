@@ -11,24 +11,25 @@ let winningCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-let winnerElement = document.getElementById('winner')
+let winnerElement = document.getElementById('winner');
+let resetGame = document.getElementById('resetgame')
 let circleTurn
 
 gameBegin()
 
+resetGame.addEventListener('click', gameBegin)
+
 function gameBegin(){
     circleTurn= false;
     boxesElement.forEach(boxes => {
-    boxes.addEventListener('click', clickedOnce, { once: true });
+        boxes.classList.remove(xElement)
+        boxes.classList.remove(oElement)
+        boxes.addEventListener('click', clickedOnce, { once: true });
 });
 
 }
 
 function clickedOnce(e) {
-    // add function for placing x/o (done)
-    // check for a win
-    // check for a draw
-    // check for whos turn
     let cell = e.target;
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement)
@@ -41,6 +42,7 @@ function clickedOnce(e) {
 }
 
 function gameFinished (draw){
+    //game finished, win or draw
     if (draw) {
         winnerElement.innerText = 'Draw!'
 } else {
@@ -49,6 +51,7 @@ function gameFinished (draw){
 }
 
 function isDraw() {
+    //check for draw
     return [...boxesElement].every(boxes => {
         return boxes.classList.contains(xElement) || boxes.classList.contains(oElement)
     })
