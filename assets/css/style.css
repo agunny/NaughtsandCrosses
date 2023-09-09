@@ -34,7 +34,9 @@ body>h1 {
     width: var(--box-size);
     height: var(--box-size);
     text-align: center;
-    border: 2px solid black;
+    border-image: linear-gradient(#f6b73c, #3C7BF6) 30;
+    border-width: 2px;
+    border-style: solid;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -83,11 +85,9 @@ body>h1 {
 
 /*Animation for when selecting boxes*/
 
-.boxes:hover {
+.boxes:not(.x):not(.circle):hover {
     background: lightgreen;
 }
-
-
 
 /*Styling of player names and scoreboard*/
 
@@ -106,3 +106,9 @@ body>h1 {
     
 }
 
+/*Reset game button*/
+
+#resetgame {
+    margin: 15px;
+
+}
