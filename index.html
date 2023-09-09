@@ -12,18 +12,18 @@
     <div>
         <div class="playerinput">
             <label for="playerx">Player X:</label>
-            <input type="text" id="playerx" placeholder="Competitor X">
+            <input type="text" id="playerXNameInput" placeholder="Competitor X">
 
             <label for="playery">Player O:</label>
-            <input type="text" id="playery" placeholder="Competitor O">
+            <input type="text" id="playerONameInput" placeholder="Competitor O">
         </div>
     </div>
     <div class="scoreboard">
-        <div>Player X
-            <span id="playerxname"></span>Wins: <span>0</span>
+        <div>Player X: 
+            <span id="playerXName"></span > Wins: <span id="playerXWins">0</span>
         </div>
-        <div>Player O
-            <span id="playeryname"></span>Wins: <span>0</span>
+        <div>Player O: 
+            <span id="playerOName"></span> Wins: <span id="playerOWins">0</span>
         </div>
     </div>
     <div class="gameboard">
@@ -38,7 +38,7 @@
         <div class="boxes" gameboxes></div>
     </div>
     <p id="winner"></p>
-    <button id="resetgame" onclick="resetGame()">Reset</button>
+    <button id="resetgame">Reset</button>
 
 
     <script src="assets/js/script.js"></script>

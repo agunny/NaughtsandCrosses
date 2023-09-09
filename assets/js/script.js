@@ -12,18 +12,30 @@ let winningCombinations = [
     [2, 4, 6]
 ];
 let winnerElement = document.getElementById('winner');
-let resetGame = document.getElementById('resetgame')
-let circleTurn
+let resetGame = document.getElementById('resetgame');
+let playerXWinsDisplay = document.getElementById('playerXWins');
+let playerOWinsDisplay = document.getElementById('playerOWins');
+let playerXNameInput = document.getElementById('playerXNameInput');
+let playerONameInput = document.getElementById('playerONameInput');
+let playerXNameDisplay = document.getElementById('playerXName');
+let playerONameDisplay = document.getElementById('playerOName');
+let playerXName = '';
+let playerOName = '';
+let playerXWins = 0;
+let playerOWins = 0;
 
-gameBegin()
+let circleTurn;
 
-resetGame.addEventListener('click', gameBegin)
+gameBegin();
+
+resetGame.addEventListener('click', gameBegin);
 
 function gameBegin(){
     circleTurn= false;
     boxesElement.forEach(boxes => {
-        boxes.classList.remove(xElement)
-        boxes.classList.remove(oElement)
+        boxes.classList.remove(xElement);
+        boxes.classList.remove(oElement);
+        boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
 });
 
@@ -32,48 +44,66 @@ function gameBegin(){
 function clickedOnce(e) {
     let cell = e.target;
     let currentElement = circleTurn ? oElement : xElement;
-    placeElement(cell, currentElement)
-    swapTurns()
+    placeElement(cell, currentElement);
+    swapTurns();
     if (checkWin(currentElement)){
-        gameFinished(false)
+        gameFinished(false);
     } else if (isDraw()) {
-        gameFinished(true)
+        gameFinished(true);
     } else {}
 }
 
 function gameFinished (draw){
     //game finished, win or draw
     if (draw) {
-        winnerElement.innerText = 'Draw!'
-} else {
-    winnerElement.innerText = `${circleTurn ? "X's" : "O's"} Wins!`
-}
+        winnerElement.innerText = 'Draw!';
+    } else {
+        winnerElement.innerText = `${circleTurn ? playerXName + "'s" : playerOName + "'s"} Wins!`;
+    }
 }
 
 function isDraw() {
     //check for draw
     return [...boxesElement].every(boxes => {
-        return boxes.classList.contains(xElement) || boxes.classList.contains(oElement)
-    })
+        return boxes.classList.contains(xElement) || boxes.classList.contains(oElement);
+    });
 }
 
 function placeElement (cell, currentElement){
-    cell.classList.add(currentElement)
+    cell.classList.add(currentElement);
 }
 
 function swapTurns (){
-    circleTurn = !circleTurn
+    circleTurn = !circleTurn;
 }
 
 function checkWin(currentElement){
     //to check all winning combinations
     return winningCombinations.some(combination => {
         return combination.every(index => {
-            return boxesElement[index].classList.contains(currentElement)
-        })
-    })
+            return boxesElement[index].classList.contains(currentElement);
+        });
+    });
 }
 
 //input players names
-//reset
+playerXNameInput.addEventListener('input', () => {
+    playerXName = playerXNameInput.value; 
+    playerXNameDisplay.textContent = playerXName;
+});
+
+playerONameInput.addEventListener('input', () => {
+    playerOName = playerONameInput.value;
+    playerONameDisplay.textContent = playerOName;
+});
+
 //scoreboard
+function updateScore(player) {
+    if (player === 'X') {
+        playerXWins++;
+        playerXWinsDisplay.textContent = playerXWins;
+    } else {
+        playerOWins++;
+        playerOWinsDisplay.textContent = playerOWins;
+    }
+}
