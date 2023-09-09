@@ -38,7 +38,6 @@ function gameBegin(){
         boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
 });
-
 }
 
 function clickedOnce(e) {
@@ -58,7 +57,7 @@ function gameFinished (draw){
     if (draw) {
         winnerElement.innerText = 'Draw!';
     } else {
-        winnerElement.innerText = `${circleTurn ? playerXName + "'s" : playerOName + "'s"} Wins!`;
+        winnerElement.innerText = `${circleTurn ? playerXName : playerOName} Wins!`;
     }
 }
 
@@ -102,6 +101,7 @@ function updateScore(player) {
     if (player === 'X') {
         playerXWins++;
         playerXWinsDisplay.textContent = playerXWins;
+        console.log(`Player X wins: ${playerXWins}`);
     } else {
         playerOWins++;
         playerOWinsDisplay.textContent = playerOWins;
