@@ -11,6 +11,7 @@ let winningCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+let circleTurn
 
 boxesElement.forEach(boxes => {
     boxes.addEventListener('click', clickedOnce, { once: true });
@@ -21,6 +22,13 @@ function clickedOnce(e) {
     // check for a win
     // check for a draw
     // check for whos turn
+    let cell = e.target;
+    let currentElement = circleTurn ? oElement : xElement;
+    placeElement(cell, currentElement)
+}
+
+function placeElement (cell, currentElement){
+    cell.classList.add(currentElement)
 }
 
 //input players names
