@@ -17,19 +17,24 @@ let playerXWinsDisplay = document.getElementById('playerXWins');
 let playerOWinsDisplay = document.getElementById('playerOWins');
 let playerXNameInput = document.getElementById('playerXNameInput');
 let playerONameInput = document.getElementById('playerONameInput');
+let playerXNameDisplay = document.getElementById('playerXName');
+let playerONameDisplay = document.getElementById('playerOName');
 let playerXName = '';
 let playerOName = '';
 let playerXWins = 0;
 let playerOWins = 0;
 let circleTurn;
+let gameActive = true;
 
 gameBegin();
 
 resetGame.addEventListener('click', gameBegin);
 
 function gameBegin() {
+    gameactive = true;
     circleTurn = false;
     boxesElement.forEach(boxes => {
+        gameActive= true;
         boxes.classList.remove(xElement);
         boxes.classList.remove(oElement);
         boxes.removeEventListener('click', clickedOnce);
@@ -38,6 +43,9 @@ function gameBegin() {
 }
 
 function clickedOnce(e) {
+    if(!gameActive) {
+        return;
+    }
     let cell = e.target;
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement);
@@ -58,6 +66,7 @@ function gameFinished(draw) {
         updateScore(winningPlayer);
         winnerElement.innerText = `${circleTurn ? playerXName : playerOName} Wins!`;
     }
+    gameActive = false;
 }
 
 function isDraw() {
