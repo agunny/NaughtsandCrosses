@@ -25,10 +25,15 @@ function clickedOnce(e) {
     let cell = e.target;
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement)
+    swapTurns()
 }
 
 function placeElement (cell, currentElement){
     cell.classList.add(currentElement)
+}
+
+function swapTurns (){
+    circleTurn = !circleTurn
 }
 
 //input players names
