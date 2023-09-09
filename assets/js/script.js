@@ -17,5 +17,12 @@ boxesElement.forEach(boxes => {
 });
 
 function clickedOnce(e) {
-    console.log('clicked once');
+    // add function for placing x/o
+    // check for a win
+    // check for a draw
+    // check for whos turn
 }
+
+//input players names
+//reset
+//scoreboard
