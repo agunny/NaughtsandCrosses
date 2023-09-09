@@ -11,6 +11,7 @@ let winningCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+let winnerElement = document.getElementById('winner')
 let circleTurn
 
 gameBegin()
@@ -32,8 +33,25 @@ function clickedOnce(e) {
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement)
     swapTurns()
-    if (checkWin(currentElement))
-    console.log("winning")
+    if (checkWin(currentElement)){
+        gameFinished(false)
+    } else if (isDraw()) {
+        gameFinished(true)
+    } else {}
+}
+
+function gameFinished (draw){
+    if (draw) {
+        winnerElement.innerText = 'Draw!'
+} else {
+    winnerElement.innerText = `${circleTurn ? "X's" : "O's"} Wins!`
+}
+}
+
+function isDraw() {
+    return [...boxesElement].every(boxes => {
+        return boxes.classList.contains(xElement) || boxes.classList.contains(oElement)
+    })
 }
 
 function placeElement (cell, currentElement){
