@@ -17,27 +17,24 @@ let playerXWinsDisplay = document.getElementById('playerXWins');
 let playerOWinsDisplay = document.getElementById('playerOWins');
 let playerXNameInput = document.getElementById('playerXNameInput');
 let playerONameInput = document.getElementById('playerONameInput');
-let playerXNameDisplay = document.getElementById('playerXName');
-let playerONameDisplay = document.getElementById('playerOName');
 let playerXName = '';
 let playerOName = '';
 let playerXWins = 0;
 let playerOWins = 0;
-
 let circleTurn;
 
 gameBegin();
 
 resetGame.addEventListener('click', gameBegin);
 
-function gameBegin(){
-    circleTurn= false;
+function gameBegin() {
+    circleTurn = false;
     boxesElement.forEach(boxes => {
         boxes.classList.remove(xElement);
         boxes.classList.remove(oElement);
         boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
-});
+    });
 }
 
 function clickedOnce(e) {
@@ -45,18 +42,20 @@ function clickedOnce(e) {
     let currentElement = circleTurn ? oElement : xElement;
     placeElement(cell, currentElement);
     swapTurns();
-    if (checkWin(currentElement)){
+    if (checkWin(currentElement)) {
         gameFinished(false);
     } else if (isDraw()) {
         gameFinished(true);
-    } else {}
+    } else { }
 }
 
-function gameFinished (draw){
+function gameFinished(draw) {
     //game finished, win or draw
     if (draw) {
         winnerElement.innerText = 'Draw!';
     } else {
+        let winningPlayer = circleTurn ? 'X' : 'O';
+        updateScore(winningPlayer);
         winnerElement.innerText = `${circleTurn ? playerXName : playerOName} Wins!`;
     }
 }
@@ -68,15 +67,15 @@ function isDraw() {
     });
 }
 
-function placeElement (cell, currentElement){
+function placeElement(cell, currentElement) {
     cell.classList.add(currentElement);
 }
 
-function swapTurns (){
+function swapTurns() {
     circleTurn = !circleTurn;
 }
 
-function checkWin(currentElement){
+function checkWin(currentElement) {
     //to check all winning combinations
     return winningCombinations.some(combination => {
         return combination.every(index => {
@@ -87,7 +86,7 @@ function checkWin(currentElement){
 
 //input players names
 playerXNameInput.addEventListener('input', () => {
-    playerXName = playerXNameInput.value; 
+    playerXName = playerXNameInput.value;
     playerXNameDisplay.textContent = playerXName;
 });
 
@@ -101,7 +100,6 @@ function updateScore(player) {
     if (player === 'X') {
         playerXWins++;
         playerXWinsDisplay.textContent = playerXWins;
-        console.log(`Player X wins: ${playerXWins}`);
     } else {
         playerOWins++;
         playerOWinsDisplay.textContent = playerOWins;
