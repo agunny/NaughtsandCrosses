@@ -9,8 +9,6 @@ This is a noughts and crosses game, implemented via the use of HTML and CSS with
 * [Demo](#demo)
 * [Features](#features)
 * [Colours and Typography](#colors)
-* [Images](#images)
-* [Features](#features)
 * [Technologies Used](#tech)
 * [Credits](#Credits)
 
