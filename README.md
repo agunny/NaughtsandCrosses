@@ -90,7 +90,7 @@ I deployed my website via the use of Github Pages. [https://pages.github.com/]
 
 ### Lighthouse
 
-
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/3ce257b1-bca2-4b0f-948c-d62973343e22)
 
 ### Real world testing
 
