@@ -33,17 +33,17 @@ resetGame.addEventListener('click', gameBegin);
 function gameBegin() {
     circleTurn = false;
     boxesElement.forEach(boxes => {
-        gameActive= true;
+        gameActive = true;
         boxes.classList.remove(xElement);
         boxes.classList.remove(oElement);
-        
+
         boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
-    })
+    });
 }
 
 function clickedOnce(e) {
-    if(!gameActive) {
+    if (!gameActive) {
         return;
     }
     let cell = e.target;

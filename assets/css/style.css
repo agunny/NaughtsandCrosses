@@ -67,7 +67,7 @@ body>h1 {
 .boxes.x::after {
     content: '';
     width: 15%;
-    height:90%;
+    height: 90%;
     position: absolute;
     background-color: #f6416c;
 }
@@ -85,14 +85,15 @@ body>h1 {
 .boxes.circle::before,
 .boxes.circle::after {
     content: '';
-    position:absolute;
+    position: absolute;
     border-radius: 50%;
 }
 
 .boxes.circle::before {
     width: 75%;
     height: 75%;
-    background-color: #42d8e8;;
+    background-color: #42d8e8;
+    ;
 }
 
 .boxes.circle::after {
@@ -175,18 +176,15 @@ body>h1 {
 }
 
 @media (max-width: 768px) {
-    body
-    {
-            font-size: 16px;
+    body {
+        font-size: 16px;
     }
 
-    .gameboard
-    {
+    .gameboard {
         grid-template-columns: repeat(3, 100px);
     }
-    
-    .boxes 
-    {
+
+    .boxes {
         width: 100px;
         height: 100px;
     }
