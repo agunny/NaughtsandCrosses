@@ -26,7 +26,6 @@ let playerOWins = 0;
 let circleTurn = '';
 let gameActive = true;
 
-
 gameBegin();
 
 resetGame.addEventListener('click', gameBegin);
@@ -37,10 +36,10 @@ function gameBegin() {
         gameActive= true;
         boxes.classList.remove(xElement);
         boxes.classList.remove(oElement);
+        
         boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
     })
-  
 }
 
 function clickedOnce(e) {
@@ -70,8 +69,8 @@ function gameFinished(draw) {
     gameActive = false;
 }
 
+//check for draw
 function isDraw() {
-    //check for draw
     return [...boxesElement].every(boxes => {
         return boxes.classList.contains(xElement) || boxes.classList.contains(oElement);
     });
@@ -85,8 +84,8 @@ function swapTurns() {
     circleTurn = !circleTurn;
 }
 
+//to check all winning combinations
 function checkWin(currentElement) {
-    //to check all winning combinations
     return winningCombinations.some(combination => {
         return combination.every(index => {
             return boxesElement[index].classList.contains(currentElement);
