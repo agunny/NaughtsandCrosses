@@ -23,8 +23,9 @@ let playerXName = '';
 let playerOName = '';
 let playerXWins = 0;
 let playerOWins = 0;
-let circleTurn;
+let circleTurn = '';
 let gameActive = true;
+
 
 gameBegin();
 
@@ -38,7 +39,8 @@ function gameBegin() {
         boxes.classList.remove(oElement);
         boxes.removeEventListener('click', clickedOnce);
         boxes.addEventListener('click', clickedOnce, { once: true });
-    });
+    })
+  
 }
 
 function clickedOnce(e) {

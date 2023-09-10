@@ -9,6 +9,11 @@ body {
     background-color: darkgray;
 }
 
+h1>a {
+    text-decoration: none;
+    color: #42d8e8;
+}
+
 body>h1 {
     font-style: bold;
     font-size: 4em;
@@ -17,6 +22,8 @@ body>h1 {
     color: #42d8e8;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /*Size of naughts and cross in relation to boxes*/
 
@@ -41,7 +48,7 @@ body>h1 {
     width: var(--box-size);
     height: var(--box-size);
     text-align: center;
-    border-image: linear-gradient(#f6b73c, #3C7BF6) 30;
+    border-image: linear-gradient(#E85242, #42d8e8) 30;
     border-width: 2px;
     border-style: solid;
     cursor: pointer;
@@ -97,8 +104,7 @@ body>h1 {
 /*Animation for when selecting boxes*/
 
 .boxes:not(.x):not(.circle):hover {
-    background-color: #aaff66;
-    border-color: #00cc00;
+    background-color: #42d8e8;
 }
 
 /*Styling of player names and scoreboard*/
@@ -127,13 +133,13 @@ body>h1 {
     color: #333;
 }
 
-/*Reset game button*/
+/*Reset game and new gamers button*/
 
 #resetgame {
     margin: 15px;
     padding: 10px 20px;
     bottom: 20px;
-    background-color: #33FFCC;
+    background-color: #42d8e8;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -143,7 +149,29 @@ body>h1 {
 }
 
 #resetgame:hover {
-    background-color: #ff3366;
+    background-color: #E85242;
+}
+
+#newgamers>a {
+    text-decoration: none;
+    color: white;
+}
+
+#newgamers {
+    margin: 15px;
+    padding: 10px 20px;
+    bottom: 20px;
+    background-color: #42d8e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#newgamers:hover {
+    background-color: #E85242;
 }
 
 @media (max-width: 768px) {
