@@ -1,6 +1,6 @@
 let xElement = 'x';
 let oElement = 'circle';
-const boxesElement = document.querySelectorAll('[gameboxes]');
+let boxesElement = document.querySelectorAll('.boxes');
 let winningCombinations = [
     [0, 1, 2],
     [3, 4, 5],
