@@ -2,7 +2,7 @@
 
 This is a noughts and crosses game, implemented via the use of HTML and CSS with the use of Javascript for the logic. 
 
-![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/d20f983c-6536-49a9-9760-06f997839128)
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/4080d36a-0aeb-411b-8824-56b87b06219f)
 
 ## Contents
 
@@ -36,17 +36,15 @@ Scoreboard: Scoreboard keeps tally of the amount of wins per person.
 
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/53368b92-8f18-4c5f-84c2-7a7c0939cc2c)
 
-##**Colours and Typography**
+## **Colours and Typography**
 
-
+Colours picked were used to make sure the game was the main focus on the game.
 
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/eb63bb6e-1f21-4a34-b851-7b182f1bf330)
 
+Text used was "play" by Jonas Hecksher to give the game a more retro feel.
 
-<<<<<<< HEAD
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/26b85fd1-38df-4947-a5f9-534c4d1a8a5d)
-
-
 ## <a id="tech"></a>Technologies Used
 
 **Github** - Used for storage of my site and for publishing online.\
@@ -57,6 +55,7 @@ Scoreboard: Scoreboard keeps tally of the amount of wins per person.
 **Bootstrap** - Bootstrap was used to align items and create items such as the navigation bar, images, forms etc.\
 **javascript** - Javascript to input logic.\
 **Google Chrome** - The website was built and tested in google Chrome.
+
 
 ### Languages Used
 
@@ -128,5 +127,3 @@ Various tips and breakdowns on code used taken from the following websites:
 * <https://developer.mozilla.org/en-US/>
 * <https://stackoverflow.com/>
 * <https://www.w3schools.com/>
-=======
->>>>>>> cb67c6e (final adjustments to readme)
