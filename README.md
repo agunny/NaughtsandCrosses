@@ -1,39 +1,45 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Naughts and crosses
 
-Welcome,
+This is a noughts and crosses game, implemented via the use of HTML and CSS with the use of Javascript for the logic. 
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/4080d36a-0aeb-411b-8824-56b87b06219f)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Contents
 
-## Codeanywhere Reminders
+* [Demo](#demo)
+* [Features](#features)
+* [Colours and Typography](#colors)
+* [Images](#images)
+* [Features](#features)
+* [Technologies Used](#tech)
+* [Credits](#Credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## **Demo**
 
-`python3 -m http.server`
+You can demo the game live here: https://agunny.github.io/NaughtsandCrosses/
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+##Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Real-time player name input: Able to input names in real time.
 
-`http_server`
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/11142b35-e623-4a2a-a1a8-487b0262365c)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Interactive gameboard: Interactive visual effects when placement an element. Visual effects stop once element has been placed. Logic in place to prevent the users from playing on once a winner has been decided.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/b22b8510-5a28-47ef-a910-fa9d0e07fb3a)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Winning detection: The game decides when there is a winner and displays a message below. 
 
-To log into the Heroku toolbelt CLI:
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/28646435-67e4-4154-a260-0c79074f6da5)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Scoreboard: Scoreboard keeps tally of the amount of wins per person.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/53368b92-8f18-4c5f-84c2-7a7c0939cc2c)
 
----
+##**Colours and Typography**
 
-Happy coding!
+
+
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/eb63bb6e-1f21-4a34-b851-7b182f1bf330)
+
+
