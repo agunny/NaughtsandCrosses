@@ -2,7 +2,7 @@
 
 This is a noughts and crosses game, implemented via the use of HTML and CSS with the use of Javascript for the logic. 
 
-![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/4080d36a-0aeb-411b-8824-56b87b06219f)
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/d20f983c-6536-49a9-9760-06f997839128)
 
 ## Contents
 
