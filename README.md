@@ -45,6 +45,11 @@ The colour choices are to avoid background noise and to keep the plays interacti
 
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/eb63bb6e-1f21-4a34-b851-7b182f1bf330)
 
+I chose to use the play font from Google fonts. This was done to give a retro look.
+
+![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/26b85fd1-38df-4947-a5f9-534c4d1a8a5d)
+
+
 ## <a id="tech"></a>Technologies Used
 
 **Github** - Used for storage of my site and for publishing online.\
