@@ -118,6 +118,12 @@ One of the bugs included me adding in a height of 100vh to the body of the HTML 
 
 Another bug was allowing the game to continue once a winner has been decided. This allowed the winner of the game to change if they carried on playing, letting the last placed element to decide the winner. This was corrected by adding a gameActive logic to the javascript to prevent further elements from being added and stopping the game, which made the end result absolute in either a draw or win.
 
+### Future Implementations
+
+If I was to add some more features to this game, it would potentially be something to do with the colours of the screen. Maybe adding an option to customise the colour of the X’s and circles to the users liking. Also maybe adding some reactive text colours so that the colour of the text changes with the current winner instead of just updating the tally of games won.
+
+Another potential addition would be for the addition of more animations and/or sounds, e.g., fireworks once a winner has been decided. Or after a certain number of games won in a row, a message to pop up along the lines of something mildly insulting to the loser. Quotes from TV shows or a small clip to play would be an interesting to look into and also add another layer of competition to the game.
+
 ## <a id="credits"></a>Credits
 
 Various tips and breakdowns on code used taken from the following websites:
