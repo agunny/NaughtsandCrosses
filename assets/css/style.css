@@ -180,12 +180,16 @@ body>h1 {
         font-size: 16px;
     }
 
+    body>h1 {
+        font-size: 2em;
+    }
+
     .gameboard {
-        grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(3, 75px);
     }
 
     .boxes {
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
     }
 }
