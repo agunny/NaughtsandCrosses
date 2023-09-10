@@ -9,14 +9,16 @@ This is a noughts and crosses game, implemented via the use of HTML and CSS with
 * [Demo](#demo)
 * [Features](#features)
 * [Colours and Typography](#colors)
+* [Images](#images)
+* [Features](#features)
 * [Technologies Used](#tech)
 * [Credits](#Credits)
 
-## <a id="demo"></a>**Demo**
+## **Demo**
 
 You can demo the game live here: https://agunny.github.io/NaughtsandCrosses/
 
-## <a id="features"></a>Features
+##Features
 
 Real-time player name input: Able to input names in real time.
 
@@ -34,19 +36,14 @@ Scoreboard: Scoreboard keeps tally of the amount of wins per person.
 
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/53368b92-8f18-4c5f-84c2-7a7c0939cc2c)
 
-Reset and refresh: Buttons to refresh the board as well as reset the score and names. Colours to change when hovered over.
-
-![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/043e6347-18b4-4d92-82da-4cddc20d861c)
+##**Colours and Typography**
 
 
-## <a id="colors"></a>**Colours and Typography**
-
-The colour choices are to avoid background noise and to keep the plays interacting with the game, the colours are complementary to hence user experience.
 
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/eb63bb6e-1f21-4a34-b851-7b182f1bf330)
 
-I chose to use the play font from Google fonts. This was done to give a retro look.
 
+<<<<<<< HEAD
 ![image](https://github.com/agunny/NaughtsandCrosses/assets/133648178/26b85fd1-38df-4947-a5f9-534c4d1a8a5d)
 
 
@@ -131,3 +128,5 @@ Various tips and breakdowns on code used taken from the following websites:
 * <https://developer.mozilla.org/en-US/>
 * <https://stackoverflow.com/>
 * <https://www.w3schools.com/>
+=======
+>>>>>>> cb67c6e (final adjustments to readme)
